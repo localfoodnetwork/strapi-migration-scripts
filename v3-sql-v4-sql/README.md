@@ -36,6 +36,9 @@ yarn
 2. Create your migrations as you want you have to return function migrateTables and array processedTables with processed tables
 3. Databases are imported from config/database.js and using knex -->
 
+### Known issues
+- ✅ accounts:users relationships missing (the relation was changed to `mappedBy` -- was and should be `inversedBy`)
+
 ### Release plan
 1. dump latest from old strapi db on production (render)
 2. import latest into old strapi db on local (old_postgres)
