@@ -1,0 +1,9 @@
+-- ALTER TABLE accounts DROP COLUMN "filters";
+-- ALTER TABLE leads DROP COLUMN "businessName";
+-- ALTER TABLE leads DROP COLUMN "productInterest";
+-- ALTER TABLE leads DROP COLUMN "marketInterest";
+-- ALTER TABLE leads DROP COLUMN "revenue";
+-- ALTER TABLE leads DROP COLUMN "deliveries";
+-- ALTER TABLE leads DROP COLUMN "startDate";
+-- ALTER TABLE leads DROP COLUMN "website";
+-- ALTER TABLE strapi_permission DROP COLUMN "fields";
