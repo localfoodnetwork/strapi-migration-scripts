@@ -37,20 +37,23 @@ yarn
 3. Databases are imported from config/database.js and using knex -->
 
 ### Known issues
+
 - ✅ accounts:users relationships missing (the relation was changed to `mappedBy` -- was and should be `inversedBy`)
+- Not a big deal, but when we populate empty slugs (via import) into the new slug uuid, they get kebab-cased. A `beforeUpdate` `account` lifecycle event might fix this. Good news is that now at least everyone has a slug.
 
 ### Release plan
+
 1. dump latest from old strapi db on production (render)
 2. import latest into old strapi db on local (old_postgres)
 3. run `yarn start`
 4. copy image files: scp -r srv-c6ailhs6fj33aqq01thg@ssh.oregon.render.com:~/project/src/public/uploads/ ~/code/localfoodnetwork/strapi/public/
 5. test:
-    1. orderflow
-    2. dashboard
-    3. core
-    4. landing page
-    5. maps
-    6. emails
+   1. orderflow
+   2. dashboard
+   3. core
+   4. landing page
+   5. maps
+   6. emails
 6. make updated `main` is ready to deploy for each repo
-6. [external psql connection string] > latest_dev.sql
-7. copy image files: scp -r srv-c6ailhs6fj33aqq01thg@ssh.oregon.render.com:~/project/src/public/uploads/ [new db server]
+7. [external psql connection string] > latest_dev.sql
+8. copy image files: scp -r srv-c6ailhs6fj33aqq01thg@ssh.oregon.render.com:~/project/src/public/uploads/ [new db server]
